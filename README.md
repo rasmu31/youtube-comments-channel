@@ -3,11 +3,12 @@ Scrape all comments of a channel : videos, streams(livechat + comments), shorts,
 
 **Requirements :**
 
-I use these libraries :<br />
-scrapetube (2.5.1) https://github.com/dermasmid/scrapetube<br />
-chat_downloader (0.2.8) https://github.com/xenova/chat-downloader<br />
-youtube_comment_downloader (0.1.76) https://github.com/egbertbouman/youtube-comment-downloader<br />
-youtube_community_tab (0.2.3.2.1) https://github.com/bot-jonas/youtube-community-tab<br />
+I use these libraries at the moment :<br />
+Python 3.12.5
+scrapetube 2.5.1 https://github.com/dermasmid/scrapetube<br />
+chat_downloader 0.2.8 https://github.com/xenova/chat-downloader<br />
+youtube_comment_downloader 0.1.76 https://github.com/egbertbouman/youtube-comment-downloader<br />
+youtube_community_tab 0.2.3.2.1 https://github.com/bot-jonas/youtube-community-tab<br />
 
 I installed them with pip.
 
