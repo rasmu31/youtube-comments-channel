@@ -1,6 +1,17 @@
 # youtube-comments-channel
 Scrape all comments of a channel : videos, streams(livechat + comments), shorts, community posts
 
+**Limitations :**
+
+Author's name is different in livechat and comments.<br/>
+In livechat, it's @something whereas it's the Youtube profile name in comments.<br/>
+To overcome this, I added the author's channel ID in parentheses.<br/>
+Example for a specific user:<br/>
+- in a comment: @LaVeriteQuiDerangeLVQD20 (UC7tNCz_45PF1xJU79i4WaKw)<br/>
+- in the chat: La Vérité Qui Dérange LVQD 20 (UC7tNCz_45PF1xJU79i4WaKw)<br/>
+
+So, if you spotted the author @LaVeriteQuiDerangeLVQD20 (UC7tNCz_45PF1xJU79i4WaKw) in a comment, you can find him in the chat by searching for UC7tNCz_45PF1xJU79i4WaKw
+
 **Requirements :**
 
 I use these libraries at the moment :<br />
