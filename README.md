@@ -3,17 +3,19 @@ Scrape all comments of a channel : videos, streams(livechat + comments), shorts,
 
 **Requirements :**
 
-I use these libraries :
-scrapetube (2.5.1) https://github.com/dermasmid/scrapetube
-chat_downloader (0.2.8) https://github.com/xenova/chat-downloader 
-youtube_comment_downloader (0.1.76) https://github.com/egbertbouman/youtube-comment-downloader
-youtube_community_tab (0.2.3.2.1) https://github.com/bot-jonas/youtube-community-tab
+I use these libraries :<br />
+scrapetube (2.5.1) https://github.com/dermasmid/scrapetube<br />
+chat_downloader (0.2.8) https://github.com/xenova/chat-downloader<br />
+youtube_comment_downloader (0.1.76) https://github.com/egbertbouman/youtube-comment-downloader<br />
+youtube_community_tab (0.2.3.2.1) https://github.com/bot-jonas/youtube-community-tab<br />
+
 I installed them with pip.
 
 **Modifications :**
 
-Warning, youtube-community-tab needs some modifications see https://github.com/bot-jonas/youtube-community-tab/issues/4
+Warning, youtube-community-tab needs some modifications see https://github.com/bot-jonas/youtube-community-tab/issues/4<br />
 In site-packages\youtube_community_tab\community_tab.py, change get_community_tab method with this :
+```
 @staticmethod
 def get_community_tab(tabs):
     COMMUNITY_TAB_INDEX = 0
@@ -28,6 +30,7 @@ def get_community_tab(tabs):
         return tabs[COMMUNITY_TAB_INDEX]
     else:
         raise
+```
 
 **Code :**
 
