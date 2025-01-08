@@ -15,7 +15,7 @@ So, if you spotted the author @LaVeriteQuiDerangeLVQD20 (UC7tNCz_45PF1xJU79i4WaK
 **Requirements :**
 
 I use these libraries at the moment :<br />
-Python 3.12.5
+Python 3.12.5<br />
 scrapetube 2.5.1 https://github.com/dermasmid/scrapetube<br />
 chat_downloader 0.2.8 https://github.com/xenova/chat-downloader<br />
 youtube_comment_downloader 0.1.76 https://github.com/egbertbouman/youtube-comment-downloader<br />
@@ -25,7 +25,14 @@ I installed them with pip.
 
 **Modifications :**
 
-Warning, youtube-community-tab needs some modifications see https://github.com/bot-jonas/youtube-community-tab/issues/4<br />
+- Change chat formatting to add channel id of author's message.<br />
+See default template in site-packages\chat_downloader\formatting\custom_formats.json<br />
+Change default.template value with :<br />
+```
+"{time_text|timestamp}{author.badges}{money.text}{author.display_name|author.name} ({author.id}){message}"
+```
+
+- Warning, youtube-community-tab needs some modifications see https://github.com/bot-jonas/youtube-community-tab/issues/4<br />
 In site-packages\youtube_community_tab\community_tab.py, change get_community_tab method with this :
 ```
 @staticmethod
