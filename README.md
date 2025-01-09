@@ -12,6 +12,9 @@ Example for a specific user:<br/>
 
 So, if you spotted the author @LaVeriteQuiDerangeLVQD20 (UC7tNCz_45PF1xJU79i4WaKw) in a comment, you can find him in the chat by searching for UC7tNCz_45PF1xJU79i4WaKw
 
+In livechat, you can get the author channel id, but not his @something<br />
+To get @something, you should make a request for every chat message, so it will be too slow.
+
 **Requirements :**
 
 I use these libraries at the moment :<br />
