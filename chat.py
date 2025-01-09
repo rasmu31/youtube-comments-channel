@@ -3,11 +3,13 @@
 from chat_downloader import ChatDownloader
 import scrapetube
 import sys
+from datetime import datetime
 
 urlchannel = "https://www.youtube.com/@Dieutoutpuissantetmodeste"
 idchannel = 'UC8Kngruyd5aQM3AALYX7S4w'
 
-f = open("chat_" + idchannel + ".txt", "w", encoding="utf-8")
+file = "chat_" + idchannel + "_" + datetime.fromtimestamp(datetime.now().timestamp()).strftime("%d%m%Y%H%M%S") +  ".txt"
+f = open(file, "w", encoding="utf-8")
 f.write("Channel " + urlchannel + " id : " + idchannel)
 f.write("\n\n")
 

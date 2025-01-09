@@ -4,13 +4,14 @@ import scrapetube
 from datetime import datetime
 from youtube_comment_downloader import *
 
-#Fix Yt update Json see https://github.com/dermasmid/scrapetube/issues/65#issuecomment-2350764999
+#Fix Yt update Json
 scrapetube.scrapetube.type_property_map['shorts'] = 'reelWatchEndpoint'
 
 urlchannel = "https://www.youtube.com/@Dieutoutpuissantetmodeste"
 idchannel = 'UC8Kngruyd5aQM3AALYX7S4w'
 
-f = open("comment_" + idchannel + ".txt", "w", encoding="utf-8")
+file = "comment_" + idchannel + "_" + datetime.fromtimestamp(datetime.now().timestamp()).strftime("%d%m%Y%H%M%S") +  ".txt"
+f = open(file, "w", encoding="utf-8")
 f.write("Channel " + urlchannel + " id : " + idchannel)
 f.write("\n\n")
 
@@ -26,6 +27,7 @@ for videotype in videostypes :
         print(url)
         f.write(url)
         f.write("\n")
+
         if videotype != "shorts":
             f.write(video['title']['runs'][0]['text'])
             f.write("\n")
@@ -34,14 +36,12 @@ for videotype in videostypes :
         for comment in comments:
             print(datetime.fromtimestamp(comment['time_parsed']).strftime("%d/%m/%Y %H:%M:%S"))
             print(comment['text'])
-            f.write(comment['author'] + "(" + datetime.fromtimestamp(comment['time_parsed']).strftime("%d/%m/%Y %H:%M:%S") + ")" + " : " + comment['text'])
+            f.write(datetime.fromtimestamp(comment['time_parsed']).strftime("%d/%m/%Y %H:%M:%S") + " " + comment['author'] + " (" + comment['channel'] + ")" + ": " + comment['text'])
             f.write("\n")
 
         f.write("\n")
     f.write("\n")
-
+    
 f.write("Done")
-
 f.close()
 print("Done")
-
