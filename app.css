@@ -1,0 +1,42 @@
+html{font-size: 1.125rem; line-height: 1.5;}
+body {width: 100%; padding: 0; margin: 0; font-family: Georgia,Cambria,Times New Roman,Times,serif;}
+#content {width: 1000px;  margin: 0 20px 0px 20px; padding: 0px 0px 20px 0px;}
+#maintenance {color: red}
+.bold {font-weight: bold;}
+button {border-radius: 45px;}
+h2{color:  #233E99;}
+td{ height: 25px; vertical-align:middle;border:1px solid #fff;}
+td.filename{word-wrap: anywhere; padding-right: 20px;}
+.path{text-indent:50px;text-align:justify;letter-spacing:3px;}
+.me{font-size:11px; font-family:arial;color:#333;}
+.indicate{font-weight: bold;}
+.label{border-radius: 45px;background-color: #DCDCDC;padding: 1px 10px 1px 10px}
+.occurences{text-align: right;}
+input {height: 25px; vertical-align: middle; font: inherit;}
+input[type=checkbox] {margin-right:15px}
+#submitbutton {padding: 10px 30px; margin: 0px 0px 20px 0px; height:unset; font-size: 1.125rem;}
+#getIdChannel {margin: 5px; padding: 0px 10px; height:unset; font-size: 1.125rem;}
+#getUsername {margin: 5px; padding: 0px 10px; height:unset; font-size: 1.125rem;}
+a, a:visited {color: black;}
+#headingResult{font-weight: bold;}
+div.has_table {overflow-x: auto;}
+#button_link {padding: 5px 10px; border:1px solid black; text-decoration: none; background-color: #f0f0f0;}
+#table_channels {border-collapse: collapse;}
+#table_channels td {border: 1px solid; padding: 5px;}
+#table_channels td.head {text-align:center;}
+select {margin:10px 0}
+option{height: 20px; font-size: 120%;}
+/* Trick to change bakground of selected option https://stackoverflow.com/a/73635723 */
+select:not(:focus) option:checked {background: linear-gradient(#238CAE 0%, #238CAE 100%);}
+option:checked {color: #ffffff; background: linear-gradient(#238CAE 0%, #238CAE 100%);}
+td.td_button_submit {padding: 30px 0px 0px;}
+#searchTable .head {padding:0px 10px 0px 0px;}
+.errorForm {color: red;}
+#result_idchannel {}
+#result_username {}
+
+@media (max-width: 1032px) {
+	#content {
+		width: unset;
+	}
+}
