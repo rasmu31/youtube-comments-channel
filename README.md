@@ -63,3 +63,7 @@ def get_community_tab(tabs):
 
 
 Output results : 3 separate texts file.
+
+**PHP page to search comments in files :**
+
+See wiki page https://github.com/rasmu31/youtube-comments-channel/wiki/PHP-search-page-:-search-in-text-files-containing-Youtube-comments
