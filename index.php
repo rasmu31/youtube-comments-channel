@@ -119,6 +119,7 @@ if (isset($_POST['getUsername']) && isset($_POST['idchannel']) && $_POST['idchan
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex">
 	<title>Search in Youtube comments</title>
 	<link rel="stylesheet" href="app.css">
 	<script src="jquery-latest.min.js"></script>
@@ -136,7 +137,7 @@ if (isset($_POST['getUsername']) && isset($_POST['idchannel']) && $_POST['idchan
 	<div>If you want to get YT id channel from @handle, type @handle in form below :</div>
 	<form id="form_getIdChannel" action="" method="POST">
 		<input type="text" id="username" name="" class="" required>
-		<input type="submit" id="getIdChannel" name="getIdChannel">
+		<input type="submit" id="getIdChannel" name="getIdChannel" value="Get">
 		<div id="result_idchannel"></div>
 	</form>
 	<br>
@@ -144,7 +145,7 @@ if (isset($_POST['getUsername']) && isset($_POST['idchannel']) && $_POST['idchan
 	<div>On the contrary, if you want @handle, type YT id channel here :</div>
 	<form id="form_getUsername" action="" method="POST">
 		<input type="text" id="idchannel" name="" class="" required>
-		<input type="submit" id="getUsername" name="getUsername">
+		<input type="submit" id="getUsername" name="getUsername" value="Get">
 		<div id="result_username"></div>
 	</form>
 	
@@ -176,7 +177,7 @@ if (isset($_POST['getUsername']) && isset($_POST['idchannel']) && $_POST['idchan
 				<tr>
 					<td></td>
 					<td class="td_button_submit">
-						<input id="submitbutton" type="submit" name="submit" value="Rechercher">
+						<input id="submitbutton" type="submit" name="submit" value="Search">
 						<?php if (isset($_POST['submit'])): ?>
 							<?php if (!isset($_POST['search']) || $_POST['search'] == ""): ?>
 							<div class="errorForm">You need to type a term to search for.</div>
